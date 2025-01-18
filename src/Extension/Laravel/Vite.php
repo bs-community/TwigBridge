@@ -71,6 +71,14 @@ class Vite extends AbstractExtension
                     return $html->toHtml();
                 }
             ),
+            new TwigFunction(
+                'viteReactRefresh',
+                function () {
+                    $html = app(IlluminateVite::class)->reactRefresh();
+
+                    return $html->toHtml();
+                }
+            ),
         ];
     }
 
